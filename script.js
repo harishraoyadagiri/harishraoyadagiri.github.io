@@ -165,10 +165,10 @@ function initTypingAnimation() {
     if (!el) return;
 
     const titles = [
-        'Data Engineer',
-        'Analytics Professional',
-        'ML Engineer',
-        'Pipeline Architect',
+        'Data Analyst',
+        'AI & Data Enthusiast',
+        'Analytics Engineer',
+        'Data Storyteller',
         'Cloud Data Specialist'
     ];
 

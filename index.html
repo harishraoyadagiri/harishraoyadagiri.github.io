@@ -25,7 +25,7 @@
     <nav id="navbar" class="navbar">
         <div class="nav-container">
             <a href="#hero" class="nav-logo">
-                <span class="logo-bracket">&lt;</span>HR<span class="logo-bracket">/&gt;</span>
+                <span class="logo-bracket">&lt;</span>YHR<span class="logo-bracket">/&gt;</span>
             </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#about" class="nav-link">About</a></li>
@@ -126,7 +126,6 @@
     <section id="about" class="section about">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-tag">// who i am</span>
                 <h2 class="section-title">About Me</h2>
             </div>
             <div class="about-grid">
@@ -195,24 +194,22 @@
                             <div class="terminal-dots">
                                 <span></span><span></span><span></span>
                             </div>
-                            <span class="terminal-title">harish_profile.json</span>
+                            <span class="terminal-title">data_pipeline.py</span>
                         </div>
-                        <pre class="about-code"><code>{
-  <span class="code-key">"name"</span>: <span class="code-string">"Harish Rao Yadagiri"</span>,
-  <span class="code-key">"role"</span>: <span class="code-string">"Data Engineer"</span>,
-  <span class="code-key">"education"</span>: {
-    <span class="code-key">"degree"</span>: <span class="code-string">"MS Business Analytics & Information Systems"</span>,
-    <span class="code-key">"school"</span>: <span class="code-string">"University of South Florida"</span>,
-    <span class="code-key">"year"</span>: <span class="code-number">2025</span>
-  },
-  <span class="code-key">"passions"</span>: [
-    <span class="code-string">"Building Data Pipelines"</span>,
-    <span class="code-string">"Machine Learning"</span>,
-    <span class="code-string">"Cloud Architecture"</span>,
-    <span class="code-string">"AI Applications"</span>
+                        <pre class="about-code"><code><span class="code-key">from</span> pipeline <span class="code-key">import</span> DataPipeline
+
+pipeline = DataPipeline(
+  <span class="code-key">source</span>=<span class="code-string">"api.weather_data"</span>,
+  <span class="code-key">transform</span>=[
+    <span class="code-string">"clean"</span>,
+    <span class="code-string">"normalize"</span>,
+    <span class="code-string">"feature_engineer"</span>
   ],
-  <span class="code-key">"currently_building"</span>: <span class="code-string">"The future related to data and AI"</span>
-}</code></pre>
+  <span class="code-key">destination</span>=<span class="code-string">"snowflake.analytics_db"</span>,
+  <span class="code-key">schedule</span>=<span class="code-string">"@daily"</span>
+)
+
+pipeline.run()  <span class="code-comment"># ✓ 11 cities processed</span></code></pre>
                     </div>
                 </div>
             </div>
@@ -225,7 +222,6 @@
     <section id="services" class="section services">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-tag">// what i deliver</span>
                 <h2 class="section-title">What I Bring</h2>
             </div>
             <div class="services-grid">
@@ -271,7 +267,6 @@
     <section id="skills" class="section skills">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-tag">// tech arsenal</span>
                 <h2 class="section-title">Skills & Technologies</h2>
             </div>
             <div class="skills-categories">
@@ -434,7 +429,6 @@
     <section id="projects" class="section projects">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-tag">// featured work</span>
                 <h2 class="section-title">Projects</h2>
             </div>
             <div class="projects-grid">
@@ -630,22 +624,35 @@
     <!-- ═══════════════════════════════════════════════ -->
     <!-- GITHUB ACTIVITY SECTION -->
     <!-- ═══════════════════════════════════════════════ -->
-    <section class="section github-activity">
+    <section class="section github-activity" id="github">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-tag">// open source</span>
                 <h2 class="section-title">GitHub Activity</h2>
             </div>
-            <div class="github-graph-card reveal">
-                <div class="github-graph-header">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                    <span>@harishraoyadagiri</span>
+            <div class="gh-terminal reveal">
+                <div class="gh-terminal-header">
+                    <div class="terminal-dots"><span></span><span></span><span></span></div>
+                    <span class="terminal-title">~/harishraoyadagiri — git log</span>
                 </div>
-                <img src="https://ghchart.rshah.org/6366f1/harishraoyadagiri" alt="GitHub Contribution Graph" class="github-chart" loading="lazy" />
-                <div class="github-graph-stats">
-                    <div class="gh-stat"><span class="gh-stat-num">21</span> Repositories</div>
-                    <div class="gh-stat"><span class="gh-stat-num">6</span> Featured Projects</div>
-                    <div class="gh-stat"><span class="gh-stat-num">15+</span> Technologies</div>
+                <div class="gh-terminal-body">
+                    <div class="gh-heatmap-row">
+                        <img src="https://ghchart.rshah.org/39d353/harishraoyadagiri" alt="GitHub Contribution Graph" class="gh-heatmap-img" loading="lazy" />
+                    </div>
+                    <div class="gh-stats-bar">
+                        <div class="gh-stat-block">
+                            <span class="gh-stat-value">21</span>
+                            <span class="gh-stat-label">repos</span>
+                        </div>
+                        <div class="gh-stat-block">
+                            <span class="gh-stat-value">6</span>
+                            <span class="gh-stat-label">featured</span>
+                        </div>
+                        <div class="gh-stat-block">
+                            <span class="gh-stat-value">15+</span>
+                            <span class="gh-stat-label">technologies</span>
+                        </div>
+                        <a href="https://github.com/harishraoyadagiri" target="_blank" rel="noopener" class="gh-profile-link">View Profile →</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -657,7 +664,6 @@
     <section id="timeline" class="section timeline">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-tag">// my journey</span>
                 <h2 class="section-title">Education & Experience</h2>
             </div>
             <div class="timeline-wrapper">
@@ -666,12 +672,28 @@
                 <div class="timeline-item reveal" data-side="right">
                     <div class="timeline-dot"></div>
                     <div class="timeline-card">
+                        <span class="timeline-date">2025 — Present</span>
+                        <h3 class="timeline-title">Data Engineer</h3>
+                        <h4 class="timeline-org">Tiruven Inc</h4>
+                        <p class="timeline-desc">
+                            Building and optimizing scalable data pipelines, designing cloud-native analytics architectures, and driving data-driven decision-making across the organization.
+                        </p>
+                        <div class="timeline-tags">
+                            <span>Data Engineering</span>
+                            <span>Cloud</span>
+                            <span>ETL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal" data-side="left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
                         <span class="timeline-date">2023 — 2025</span>
                         <h3 class="timeline-title">MS, Business Analytics & Information Systems</h3>
                         <h4 class="timeline-org">University of South Florida</h4>
                         <p class="timeline-desc">
-                            Focused on advanced data analytics, machine learning, cloud computing, and business
-                            intelligence. Built end-to-end data pipelines and AI applications as capstone projects.
+                            Advanced coursework in data analytics, machine learning, cloud computing, and business intelligence. Built end-to-end data pipelines and AI applications.
                         </p>
                         <div class="timeline-tags">
                             <span>Data Analytics</span>
@@ -681,20 +703,36 @@
                     </div>
                 </div>
 
+                <div class="timeline-item reveal" data-side="right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">2023 — 2025</span>
+                        <h3 class="timeline-title">Graduate Assistant</h3>
+                        <h4 class="timeline-org">University of South Florida</h4>
+                        <p class="timeline-desc">
+                            Supported academic research and teaching in analytics courses, assisted students with data analysis and visualization projects.
+                        </p>
+                        <div class="timeline-tags">
+                            <span>Teaching</span>
+                            <span>Research</span>
+                            <span>Analytics</span>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="timeline-item reveal" data-side="left">
                     <div class="timeline-dot"></div>
                     <div class="timeline-card">
-                        <span class="timeline-date">2023</span>
-                        <h3 class="timeline-title">Data Engineering Projects</h3>
-                        <h4 class="timeline-org">Professional Development</h4>
+                        <span class="timeline-date">2020 — 2023</span>
+                        <h3 class="timeline-title">Project Engineer</h3>
+                        <h4 class="timeline-org">Wipro Limited</h4>
                         <p class="timeline-desc">
-                            Developed proficiency in modern data stack — Apache Spark, Airflow, dbt, and cloud
-                            platforms. Built real-world ETL pipelines and streaming data solutions.
+                            Worked on enterprise-level technology solutions, contributing to data-driven projects and gaining experience with large-scale system implementations.
                         </p>
                         <div class="timeline-tags">
-                            <span>Apache Spark</span>
-                            <span>Airflow</span>
-                            <span>dbt</span>
+                            <span>Enterprise Tech</span>
+                            <span>Project Management</span>
+                            <span>Data Solutions</span>
                         </div>
                     </div>
                 </div>
@@ -702,35 +740,16 @@
                 <div class="timeline-item reveal" data-side="right">
                     <div class="timeline-dot"></div>
                     <div class="timeline-card">
-                        <span class="timeline-date">2022 — 2023</span>
-                        <h3 class="timeline-title">Network Ad Blocking Solution</h3>
-                        <h4 class="timeline-org">IoT & Network Engineering</h4>
+                        <span class="timeline-date">2016 — 2020</span>
+                        <h3 class="timeline-title">BTech, Electronics & Communication Engineering</h3>
+                        <h4 class="timeline-org">JNTU Hyderabad</h4>
                         <p class="timeline-desc">
-                            Designed and deployed a network-wide ad-blocking system using Raspberry Pi 4, demonstrating
-                            expertise in networking, Linux administration, and infrastructure engineering.
+                            Strong foundation in engineering principles, signal processing, and embedded systems. Developed analytical and problem-solving skills applied to data engineering.
                         </p>
                         <div class="timeline-tags">
-                            <span>Raspberry Pi</span>
-                            <span>Linux</span>
-                            <span>Networking</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item reveal" data-side="left">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <span class="timeline-date">Ongoing</span>
-                        <h3 class="timeline-title">AI & Full-Stack Development</h3>
-                        <h4 class="timeline-org">Continuous Learning</h4>
-                        <p class="timeline-desc">
-                            Actively building AI-powered applications (Ask AI Buffett, WorldMonitor), multi-agent
-                            systems with CrewAI, and contributing to open-source data engineering resources.
-                        </p>
-                        <div class="timeline-tags">
-                            <span>Generative AI</span>
-                            <span>React</span>
-                            <span>Next.js</span>
+                            <span>ECE</span>
+                            <span>Signal Processing</span>
+                            <span>Engineering</span>
                         </div>
                     </div>
                 </div>
@@ -744,7 +763,6 @@
     <section id="contact" class="section contact">
         <div class="container">
             <div class="section-header reveal">
-                <span class="section-tag">// let's connect</span>
                 <h2 class="section-title">Get in Touch</h2>
             </div>
             <div class="contact-content reveal">
@@ -797,7 +815,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <span class="logo-bracket">&lt;</span>HR<span class="logo-bracket">/&gt;</span>
+                    <span class="logo-bracket">&lt;</span>YHR<span class="logo-bracket">/&gt;</span>
                 </div>
                 <p class="footer-text">
                     Designed & Built by Harish Rao Yadagiri &copy; 2025
