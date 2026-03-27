@@ -88,11 +88,4 @@ My passion lies in building scalable data infrastructure and leveraging machine 
 - ⚙️ **Project Engineer** @ Wipro Limited *(2020 — 2023)*  
 - 🎓 **BTech, Electronics & Communication** @ Amrita Vishwa Vidyapeetham *(2017 — 2021)*  
 
----
 
-### 📈 GitHub Stats
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=harishraoyadagiri&show_icons=true&theme=radical" alt="GitHub Stats" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=harishraoyadagiri&theme=radical" alt="GitHub Streak" />
-</div>
